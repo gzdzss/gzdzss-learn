@@ -1,0 +1,20 @@
+package com.gzdzss.learn.rpc.serialization;
+
+
+/**
+ * @author Andrew
+ * @create 2020/11/5 5:26 下午
+ */
+public class SerializationFactory {
+    
+    public static Serialization get(byte type) {
+        switch (type & 0x7) {
+            case 0x0:
+                return new HessianSerialization();
+            default:
+                return new HessianSerialization();
+        }
+        
+    }
+    
+}
